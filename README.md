@@ -8,6 +8,8 @@
 
 
 
+
+
 An advanced, end-to-end AI fraud detection system that identifies fake online reviews. Unlike traditional text-only classifiers, this system models e-commerce interactions as a **Heterogeneous Graph** (`User → writes → Review → belongs_to → Product`) and utilizes a **Heterogeneous Graph Transformer (HGT)** GNN model (implemented in PyTorch Geometric) to detect suspicious behavioral patterns, astroturfing, and coordinate spam rings.
 
 ---
