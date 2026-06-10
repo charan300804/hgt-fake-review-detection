@@ -1,5 +1,11 @@
 # HGT Fake Review Detection System 🔍🤖
 
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript&style=for-the-badge)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-Framework-black?logo=next.js&style=for-the-badge)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind--CSS-3.4-38B2AC?logo=tailwind-css&style=for-the-badge)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+
 An advanced, end-to-end AI fraud detection system that identifies fake online reviews. Unlike traditional text-only classifiers, this system models e-commerce interactions as a **Heterogeneous Graph** (`User → writes → Review → belongs_to → Product`) and utilizes a **Heterogeneous Graph Transformer (HGT)** GNN model (implemented in PyTorch Geometric) to detect suspicious behavioral patterns, astroturfing, and coordinate spam rings.
 
 ---
