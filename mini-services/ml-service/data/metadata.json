@@ -1,0 +1,18 @@
+{
+  "total_reviews": 40526,
+  "genuine_reviews": 20232,
+  "fake_reviews": 20294,
+  "unique_users": 2000,
+  "unique_products": 1000,
+  "categories": [
+    "Electronics",
+    "Books",
+    "Clothing",
+    "Home",
+    "Sports",
+    "Beauty",
+    "Food"
+  ],
+  "created_at": "2026-02-21T21:11:15.725138",
+  "source": "HuggingFace: theArijitDas/Fake-Reviews-Dataset"
+}

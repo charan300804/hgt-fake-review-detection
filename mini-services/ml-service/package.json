@@ -1,0 +1,7 @@
+{
+  "name": "ml-service",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "cd /home/z/my-project/mini-services/ml-service && python -m uvicorn index:app --host 0.0.0.0 --port 5001 --reload"
+  }
+}

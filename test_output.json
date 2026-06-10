@@ -1,0 +1,9 @@
+{
+  "review_id": "test_final_v2",
+  "prediction": "genuine",
+  "confidence": 0.5469642281532288,
+  "fraud_probability": 0.5469642281532288,
+  "risk_factors": [],
+  "low_confidence": true,
+  "processing_time_ms": 13305.482864379883
+}

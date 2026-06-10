@@ -1,0 +1,52 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  reviews   Review[] // User -> writes -> Review
+}
+
+model Product {
+  id        String   @id @default(cuid())
+  category  String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  reviews   Review[] // Review -> belongs_to -> Product
+}
+
+model Review {
+  id             String   @id @default(cuid())
+  reviewId       String   @unique // The original review ID from the dataset
+  reviewText     String
+  rating         Int
+  helpfulVotes   Int      @default(0)
+  totalVotes     Int      @default(0)
+  label          String?  // 'genuine' or 'fake'
+  isFake         Int?     // 1 or 0
+  verified       Int?     @default(0) // 1 or 0
+  
+  userId         String
+  user           User     @relation(fields: [userId], references: [id])
+  
+  productId      String
+  product        Product  @relation(fields: [productId], references: [id])
+  
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
