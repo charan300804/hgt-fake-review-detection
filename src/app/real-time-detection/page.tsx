@@ -268,7 +268,7 @@ export default function RealTimeDetectionPage({ onNavigate }: { onNavigate: (pag
                           <button
                             key={star}
                             onClick={() => setRating(star)}
-                            className={`text-2xl ${star <= rating ? 'text-amber-400' : 'text-slate-200'}`}
+                            className={`text-2xl ${star <= (Number(rating) || 0) ? 'text-amber-400' : 'text-slate-200'}`}
                           >
                             ★
                           </button>
